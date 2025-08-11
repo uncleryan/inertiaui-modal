@@ -23,6 +23,7 @@
         "postcss": "^8.4.31",
         "react": "19.0.0",
         "react-dom": "19.0.0",
+        "radix-vue": "^1.9.17",
         "tailwindcss": "^3.2.1",
         "vite": "^6.1",
         "vue": "^3.4.0"
