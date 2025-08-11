@@ -13,8 +13,8 @@ export default defineConfig({
     resolve: packagesAreInstalled ? {} : {
         dedupe: ['@inertiajs/react', '@inertiajs/vue3', 'axios'],
         alias: {
-            '@inertiaui/modal-react': '/../react',
-            '@inertiaui/modal-vue': '/../vue'
+            '@inertiaui/modal-react': '/vendor/inertiaui/modal/react/dist/inertiaui-modal',
+            '@inertiaui/modal-vue': '/vendor/inertiaui/modal/vue/dist/inertiaui-modal'
         }
     },
 
@@ -32,4 +32,11 @@ export default defineConfig({
             },
         }),
     ],
+    server: {
+        host: '0.0.0.0',
+        port: 5173,
+        hmr: {
+            host: 'localhost',
+        },
+    },
 });
