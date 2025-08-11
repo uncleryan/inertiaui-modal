@@ -1,0 +1,31 @@
+services:
+  laravel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/workspace:cached
+      - /workspace/vendor
+      - /workspace/node_modules
+    ports:
+      - "8000:8000"
+      - "5173:5173"
+    environment:
+      - DB_CONNECTION=sqlite
+      - DB_DATABASE=/workspace/database/database.sqlite
+    working_dir: /workspace
+    command: sleep infinity
+    networks:
+      - laravel
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    networks:
+      - laravel
+
+networks:
+  laravel:
+    driver: bridge

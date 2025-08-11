@@ -1,0 +1,35 @@
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+      - /workspace/demo-app/vendor
+      - /workspace/demo-app/node_modules
+      - /workspace/react/node_modules
+      - /workspace/vue/node_modules
+      - /workspace/docs/node_modules
+    ports:
+      - "8000:8000"
+      - "5173:5173"
+      - "3000:3000"
+    environment:
+      - DB_CONNECTION=sqlite
+      - DB_DATABASE=/workspace/demo-app/database/database.sqlite
+    working_dir: /workspace
+    command: sleep infinity
+    networks:
+      - inertia-modal
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    networks:
+      - inertia-modal
+
+networks:
+  inertia-modal:
+    driver: bridge
