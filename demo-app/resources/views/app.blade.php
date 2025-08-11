@@ -23,7 +23,6 @@
         <p class="text-xs">
             {{ config('app.stack') === 'react' ? 'React stack' : 'Vue stack' }}
         </p>
-
         @inertia
     </body>
 </html>

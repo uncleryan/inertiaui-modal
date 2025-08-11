@@ -13,8 +13,8 @@ export default defineConfig({
     resolve: packagesAreInstalled ? {} : {
         dedupe: ['@inertiajs/react', '@inertiajs/vue3', 'axios'],
         alias: {
-            '@inertiaui/modal-react': '/vendor/inertiaui/modal/react/dist/inertiaui-modal',
-            '@inertiaui/modal-vue': '/vendor/inertiaui/modal/vue/dist/inertiaui-modal'
+            '@inertiaui/modal-react': '/vendor/inertiaui/modal/react/src/inertiauiModal',
+            '@inertiaui/modal-vue': '/vendor/inertiaui/modal/vue/src/inertiauiModal'
         }
     },
 

@@ -7,10 +7,12 @@
         "build-watch": "vite build --watch"
     },
     "devDependencies": {
+        "@headlessui/react": "^2.2.7",
+        "@headlessui/vue": "^1.7.23",
         "@heroicons/react": "^2.1.5",
         "@heroicons/vue": "^2.1.5",
-        "@inertiajs/react": "^1.0.0",
-        "@inertiajs/vue3": "^1.0.0",
+        "@inertiajs/react": "^2.0.17",
+        "@inertiajs/vue3": "^2.0.17",
         "@tailwindcss/forms": "^0.5.3",
         "@vitejs/plugin-react": "^4.3.1",
         "@vitejs/plugin-vue": "^5.2.0",
